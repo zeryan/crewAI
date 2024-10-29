@@ -1,0 +1,23 @@
+[project]
+name = "corrupcion_politica"
+version = "0.1.0"
+description = "corrupcion_politica using crewAI"
+authors = [{ name = "zeryan", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.75.0,<1.0.0"
+]
+
+[project.scripts]
+corrupcion_politica = "corrupcion_politica.main:run"
+run_crew = "corrupcion_politica.main:run"
+train = "corrupcion_politica.main:train"
+replay = "corrupcion_politica.main:replay"
+test = "corrupcion_politica.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+crew = "corrupcion_politica.crew:CorrupcionPoliticaCrew"
