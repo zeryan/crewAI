@@ -1,0 +1,17 @@
+[project]
+name = "2_rfq_multiagent"
+version = "0.1.0"
+description = "2_rfq_multiagent using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.75.0,<1.0.0",
+]
+
+[project.scripts]
+kickoff = "2_rfq_multiagent.main:kickoff"
+plot = "2_rfq_multiagent.main:plot"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

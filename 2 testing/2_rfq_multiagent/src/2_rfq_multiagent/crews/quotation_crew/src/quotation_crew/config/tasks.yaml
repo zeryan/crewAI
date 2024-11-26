@@ -1,0 +1,780 @@
+# tasks.yaml for Construction Business Development MAS
+
+# Project Management Tasks
+project_management_tasks:
+  - name: project_planning
+    description: Develop a comprehensive project plan, including scope, schedule, budget, and resources.
+    expected_output: A detailed project plan document.
+    agent: project_manager
+    context:
+      - gather_requirements
+      - define_scope
+      - create_schedule
+      - estimate_costs
+      - identify_resources
+  - name: stakeholder_management
+    description: Manage communication and relationships with all project stakeholders, including clients, subcontractors, and regulatory bodies.
+    expected_output: A stakeholder register and communication plan.
+    agent: project_manager
+    context:
+      - identify_stakeholders
+      - define_roles_responsibilities
+      - establish_communication_channels
+      - manage_expectations
+  - name: risk_management
+    description: Identify, assess, and mitigate potential project risks.
+    expected_output: A risk register and mitigation plan.
+    agent: project_manager
+    context:
+      - identify_risks
+      - assess_risk_probability_impact
+      - develop_mitigation_strategies
+  - name: quality_management
+    description: Ensure the project meets quality standards and complies with relevant regulations.
+    expected_output: A quality management plan and inspection procedures.
+    agent: project_manager
+    context:
+      - define_quality_standards
+      - establish_quality_control_processes
+      - conduct_inspections
+  - name: project_reporting
+    description: Generate regular project reports to track progress, identify issues, and communicate updates to stakeholders.
+    expected_output: Project status reports, progress reports, and issue logs.
+    agent: project_manager
+    context:
+      - collect_project_data
+      - analyze_data
+      - generate_reports
+
+# Construction Management Tasks
+construction_management_tasks:
+  - name: site_setup
+    description: Establish the construction site, including site preparation, temporary facilities, and safety measures.
+    expected_output: A site layout plan and safety procedures.
+    agent: construction_manager
+    context:
+      - site_preparation
+      - temporary_facilities_setup
+      - safety_measures_implementation
+  - name: subcontractor_management
+    description: Manage relationships with subcontractors, ensuring performance, compliance, and coordination.
+    expected_output: Subcontractor agreements, performance tracking, and communication logs.
+    agent: construction_manager
+    context:
+      - select_subcontractors
+      - negotiate_contracts
+      - monitor_performance
+      - manage_communication
+  - name: construction_execution
+    description: Oversee the construction process, ensuring adherence to plans, specifications, and schedules.
+    expected_output: Construction progress reports, inspection reports, and issue logs.
+    agent: construction_manager
+    context:
+      - follow_construction_drawings_specifications
+      - manage_work_schedules
+      - conduct_inspections
+      - address_issues
+  - name: quality_control
+    description: Ensure the quality of construction work and materials, conducting inspections and addressing defects.
+    expected_output: Quality control reports, inspection reports, and defect logs.
+    agent: construction_manager
+    context:
+      - define_quality_standards
+      - conduct_inspections
+      - address_defects
+  - name: safety_management
+    description: Implement and enforce safety protocols, ensuring the safety of all personnel and compliance with regulations.
+    expected_output: Safety procedures, incident reports, and safety training records.
+    agent: construction_manager
+    context:
+      - implement_safety_protocols
+      - conduct_safety_inspections
+      - investigate_incidents
+      - provide_safety_training
+
+# Quantity Estimation Tasks
+quantity_estimation_tasks:
+  - name: quantity_takeoff
+    description: Extract quantities of materials and labor from construction drawings and specifications.
+    expected_output: A detailed quantity takeoff document.
+    agent: quantity_estimator
+    context:
+      - analyze_drawings_specifications
+      - identify_quantities
+      - document_quantities
+  - name: material_estimation
+    description: Estimate the quantities of materials required for the project, considering waste factors and local availability.
+    expected_output: A material list with estimated quantities.
+    agent: quantity_estimator
+    context:
+      - analyze_material_specifications
+      - estimate_quantities
+      - consider_waste_factors
+      - check_local_availability
+  - name: labor_estimation
+    description: Estimate the labor hours required for the project, considering crew sizes, productivity rates, and local labor costs.
+    expected_output: A labor estimate with estimated hours and costs.
+    agent: quantity_estimator
+    context:
+      - analyze_work_scopes
+      - estimate_labor_hours
+      - consider_crew_sizes
+      - check_productivity_rates
+      - analyze_labor_costs
+
+# Contract Management Tasks
+contract_management_tasks:
+  - name: contract_negotiation
+    description: Negotiate contracts with suppliers and subcontractors, ensuring favorable terms and compliance with legal frameworks.
+    expected_output: Negotiated contracts with agreed-upon terms.
+    agent: contract_manager
+    context:
+      - identify_contract_requirements
+      - negotiate_terms_conditions
+      - ensure_legal_compliance
+  - name: contract_administration
+    description: Manage contract execution, track performance, and address any disputes or issues.
+    expected_output: Contract performance reports, dispute resolution records, and communication logs.
+    agent: contract_manager
+    context:
+      - monitor_contract_performance
+      - address_contract_issues
+      - manage_contract_communications
+  - name: contract_compliance
+    description: Ensure compliance with contractual obligations, including payment terms, performance standards, and legal requirements.
+    expected_output: Compliance reports, audit records, and legal documentation.
+    agent: contract_manager
+    context:
+      - monitor_contract_compliance
+      - conduct_audits
+      - address_non-compliance_issues
+
+# Planning Tasks
+planning_tasks:
+  - name: schedule_development
+    description: Develop a detailed project schedule, including activities, durations, dependencies, and milestones.
+    expected_output: A project schedule with a Gantt chart or network diagram.
+    agent: planner
+    context:
+      - define_project_activities
+      - estimate_activity_durations
+      - identify_dependencies
+      - establish_milestones
+  - name: schedule_management
+    description: Manage the project schedule, track progress, identify delays, and implement corrective actions.
+    expected_output: Schedule updates, delay reports, and corrective action plans.
+    agent: planner
+    context:
+      - track_schedule_progress
+      - identify_delays
+      - implement_corrective_actions
+  - name: resource_allocation
+    description: Allocate resources, including personnel, equipment, and materials, to project activities.
+    expected_output: Resource allocation plans and resource tracking reports.
+    agent: planner
+    context:
+      - identify_resource_requirements
+      - allocate_resources
+      - track_resource_utilization
+
+# Cost Management Tasks
+cost_management_tasks:
+  - name: budget_development
+    description: Develop a detailed project budget, including cost estimates for materials, labor, equipment, and other expenses.
+    expected_output: A project budget with cost breakdowns.
+    agent: cost_manager
+    context:
+      - gather_cost_estimates
+      - develop_budget_structure
+      - allocate_budget_items
+  - name: cost_control
+    description: Track project expenses, monitor budget adherence, and identify cost-saving opportunities.
+    expected_output: Cost tracking reports, variance analysis, and cost-saving recommendations.
+    agent: cost_manager
+    context:
+      - track_project_expenses
+      - monitor_budget_adherence
+      - analyze_cost_variances
+      - identify_cost_saving_opportunities
+  - name: cost_reporting
+    description: Generate cost reports to track expenses, analyze variances, and communicate financial status to stakeholders.
+    expected_output: Cost reports, variance analysis reports, and financial statements.
+    agent: cost_manager
+    context:
+      - collect_cost_data
+      - analyze_cost_data
+      - generate_cost_reports
+
+# Safety Tasks
+safety_tasks:
+  - name: safety_plan_development
+    description: Develop a comprehensive safety plan, including safety procedures, emergency response plans, and training programs.
+    expected_output: A safety plan document with detailed procedures.
+    agent: safety_agent
+    context:
+      - identify_safety_hazards
+      - develop_safety_procedures
+      - create_emergency_response_plans
+      - design_training_programs
+  - name: safety_inspections
+    description: Conduct regular safety inspections of the construction site, identifying hazards and addressing safety violations.
+    expected_output: Inspection reports, hazard identification logs, and corrective action plans.
+    agent: safety_agent
+    context:
+      - conduct_site_inspections
+      - identify_hazards
+      - address_safety_violations
+  - name: safety_training
+    description: Provide safety training to all personnel, covering construction safety protocols, emergency procedures, and hazard awareness.
+    expected_output: Training records, attendance logs, and evaluation reports.
+    agent: safety_agent
+    context:
+      - develop_training_materials
+      - conduct_training_sessions
+      - track_training_records
+
+# Environment Tasks
+environment_tasks:
+  - name: environmental_impact_assessment
+    description: Conduct an environmental impact assessment, identifying potential impacts and developing mitigation measures.
+    expected_output: An environmental impact assessment report with mitigation plans.
+    agent: environment_agent
+    context:
+      - identify_potential_impacts
+      - assess_impact_significance
+      - develop_mitigation_measures
+  - name: environmental_compliance
+    description: Ensure compliance with environmental regulations, including waste management, air quality, and water quality.
+    expected_output: Compliance reports, audit records, and environmental permits.
+    agent: environment_agent
+    context:
+      - monitor_environmental_compliance
+      - conduct_audits
+      - obtain_environmental_permits
+  - name: sustainable_construction_practices
+    description: Implement sustainable construction practices, such as using recycled materials, reducing energy consumption, and minimizing waste.
+    expected_output: Sustainable construction plan, material sourcing records, and waste management reports.
+    agent: environment_agent
+    context:
+      - identify_sustainable_practices
+      - implement_sustainable_practices
+      - track_environmental_performance
+
+# Security Tasks
+security_tasks:
+  - name: security_plan_development
+    description: Develop a comprehensive security plan, including access control, surveillance, and emergency response procedures.
+    expected_output: A security plan document with detailed procedures.
+    agent: security_agent
+    context:
+      - identify_security_risks
+      - develop_security_protocols
+      - implement_access_control
+      - install_surveillance_systems
+      - create_emergency_response_plans
+  - name: security_patrols
+    description: Conduct regular security patrols of the construction site, identifying potential threats and addressing security breaches.
+    expected_output: Patrol reports, incident reports, and security logs.
+    agent: security_agent
+    context:
+      - conduct_site_patrols
+      - identify_security_breaches
+      - respond_to_security_incidents
+  - name: security_training
+    description: Provide security training to all personnel, covering security protocols, emergency procedures, and threat awareness.
+    expected_output: Training records, attendance logs, and evaluation reports.
+    agent: security_agent
+    context:
+      - develop_security_training_materials
+      - conduct_security_training_sessions
+      - track_security_training_records
+
+# Supply Chain Tasks
+supply_chain_tasks:
+  - name: material_sourcing
+    description: Source materials and equipment from suppliers, ensuring competitive pricing, quality, and timely delivery.
+    expected_output: Supplier lists, material specifications, and purchase orders.
+    agent: supply_chain_agent
+    context:
+      - identify_suppliers
+      - request_quotations
+      - evaluate_supplier_proposals
+      - negotiate_prices
+      - place_purchase_orders
+  - name: logistics_management
+    description: Manage the transportation and delivery of materials and equipment to the construction site.
+    expected_output: Delivery schedules, transportation records, and logistics reports.
+    agent: supply_chain_agent
+    context:
+      - plan_material_delivery
+      - track_material_shipments
+      - manage_transportation_logistics
+  - name: inventory_management
+    description: Manage the inventory of materials and equipment at the construction site, ensuring availability and minimizing waste.
+    expected_output: Inventory records, material usage reports, and waste management reports.
+    agent: supply_chain_agent
+    context:
+      - track_material_inventory
+      - manage_material_usage
+      - minimize_material_waste
+
+# Human Resources Tasks
+hr_tasks:
+  - name: recruitment
+    description: Recruit qualified personnel for the project, including skilled laborers, technicians, and management staff.
+    expected_output: Candidate lists, interview records, and hiring decisions.
+    agent: hr_agent
+    context:
+      - identify_recruitment_needs
+      - advertise_job_openings
+      - screen_candidates
+      - conduct_interviews
+      - make_hiring_decisions
+  - name: onboarding
+    description: Onboard new employees, providing them with necessary information, training, and support.
+    expected_output: Onboarding checklists, training records, and employee handbooks.
+    agent: hr_agent
+    context:
+      - welcome_new_employees
+      - provide_orientation
+      - conduct_training
+      - assign_roles_responsibilities
+  - name: performance_management
+    description: Manage employee performance, providing feedback, training, and development opportunities.
+    expected_output: Performance reviews, training records, and development plans.
+    agent: hr_agent
+    context:
+      - conduct_performance_reviews
+      - provide_feedback
+      - identify_training_needs
+      - develop_development_plans
+
+# Subcontractor Management Tasks
+subcontractor_management_tasks:
+  - name: subcontractor_selection
+    description: Select qualified subcontractors for specific project tasks, considering their experience, expertise, and pricing.
+    expected_output: Subcontractor lists, evaluation reports, and selection decisions.
+    agent: subcontractor_manager
+    context:
+      - identify_subcontractor_needs
+      - request_subcontractor_proposals
+      - evaluate_subcontractor_proposals
+      - select_subcontractors
+  - name: subcontractor_contract_management
+    description: Manage contracts with subcontractors, ensuring compliance with terms, performance standards, and legal requirements.
+    expected_output: Subcontractor agreements, performance tracking reports, and communication logs.
+    agent: subcontractor_manager
+    context:
+      - negotiate_subcontractor_contracts
+      - monitor_subcontractor_performance
+      - address_subcontractor_issues
+      - manage_subcontractor_communications
+  - name: subcontractor_payment
+    description: Manage subcontractor payments, ensuring timely and accurate payments based on contract terms and performance.
+    expected_output: Payment records, invoice processing logs, and payment reconciliation reports.
+    agent: subcontractor_manager
+    context:
+      - track_subcontractor_invoices
+      - process_subcontractor_payments
+      - reconcile_subcontractor_payments
+
+# Quality Tasks
+quality_tasks:
+  - name: quality_plan_development
+    description: Develop a comprehensive quality plan, defining quality standards, inspection procedures, and defect correction processes.
+    expected_output: A quality plan document with detailed procedures.
+    agent: quality_agent
+    context:
+      - define_quality_standards
+      - establish_inspection_procedures
+      - develop_defect_correction_processes
+  - name: quality_inspections
+    description: Conduct regular quality inspections of construction work and materials, identifying defects and addressing non-compliance.
+    expected_output: Inspection reports, defect logs, and corrective action plans.
+    agent: quality_agent
+    context:
+      - conduct_work_inspections
+      - identify_defects
+      - address_non-compliance
+  - name: quality_control_documentation
+    description: Maintain quality control documentation, including inspection reports, test results, and defect correction records.
+    expected_output: Quality control records, inspection reports, and defect logs.
+    agent: quality_agent
+    context:
+      - document_inspections
+      - record_test_results
+      - track_defect_corrections
+
+# Procurement Tasks
+procurement_tasks:
+  - name: supplier_identification
+    description: Identify potential suppliers for materials and equipment, considering their reputation, pricing, and delivery capabilities.
+    expected_output: Supplier lists, supplier evaluation reports, and supplier selection decisions.
+    agent: procurement_agent
+    context:
+      - research_potential_suppliers
+      - evaluate_supplier_capabilities
+      - select_suppliers
+  - name: procurement_negotiation
+    description: Negotiate prices, terms, and conditions with suppliers, ensuring competitive pricing and favorable contract terms.
+    expected_output: Negotiated contracts with agreed-upon terms.
+    agent: procurement_agent
+    context:
+      - request_quotations
+      - evaluate_supplier_quotations
+      - negotiate_prices_terms
+      - finalize_contracts
+  - name: procurement_management
+    description: Manage the procurement process, including placing purchase orders, tracking deliveries, and resolving any procurement issues.
+    expected_output: Purchase orders, delivery schedules, and procurement issue logs.
+    agent: procurement_agent
+    context:
+      - place_purchase_orders
+      - track_material_deliveries
+      - address_procurement_issues
+
+# Permits Tasks
+permits_tasks:
+  - name: permit_application_preparation
+    description: Prepare permit applications, including gathering necessary documentation, completing forms, and submitting applications to relevant authorities.
+    expected_output: Permit applications with supporting documentation.
+    agent: permits_agent
+    context:
+      - identify_required_permits
+      - gather_permit_application_documents
+      - complete_permit_application_forms
+      - submit_permit_applications
+  - name: permit_tracking
+    description: Track the status of permit applications, communicating with authorities and addressing any issues or delays.
+    expected_output: Permit application status reports, communication logs, and issue resolution records.
+    agent: permits_agent
+    context:
+      - monitor_permit_application_status
+      - communicate_with_authorities
+      - address_permit_application_issues
+  - name: permit_compliance
+    description: Ensure compliance with permit conditions, including construction methods, environmental regulations, and safety requirements.
+    expected_output: Compliance reports, inspection records, and permit modification requests.
+    agent: permits_agent
+    context:
+      - monitor_permit_compliance
+      - conduct_compliance_inspections
+      - address_non-compliance_issues
+
+# Engineering Tasks
+engineering_tasks:
+  - name: design_development
+    description: Develop engineering designs, including structural, mechanical, electrical, and other relevant disciplines.
+    expected_output: Engineering drawings, specifications, and calculations.
+    agent: engineering_agent
+    context:
+      - gather_design_requirements
+      - develop_design_concepts
+      - create_engineering_drawings
+      - perform_engineering_calculations
+  - name: design_review
+    description: Review engineering designs, ensuring compliance with codes, standards, and project requirements.
+    expected_output: Design review reports, comments, and revisions.
+    agent: engineering_agent
+    context:
+      - conduct_design_reviews
+      - identify_design_issues
+      - recommend_design_revisions
+  - name: technical_support
+    description: Provide technical support to the construction team, addressing engineering-related questions and resolving technical issues.
+    expected_output: Technical support records, issue resolution logs, and communication reports.
+    agent: engineering_agent
+    context:
+      - provide_technical_assistance
+      - resolve_technical_issues
+      - communicate_technical_information
+
+# Legal Tasks
+legal_tasks:
+  - name: contract_review
+    description: Review contracts with suppliers, subcontractors, and other parties, ensuring compliance with legal frameworks and protecting the project's interests.
+    expected_output: Contract review reports, legal advice, and contract revisions.
+    agent: legal_agent
+    context:
+      - analyze_contract_terms
+      - identify_legal_risks
+      - provide_legal_advice
+      - recommend_contract_revisions
+  - name: legal_compliance
+    description: Ensure compliance with all relevant laws and regulations, including construction codes, environmental regulations, and labor laws.
+    expected_output: Compliance reports, legal documentation, and legal advice.
+    agent: legal_agent
+    context:
+      - monitor_legal_compliance
+      - conduct_legal_audits
+      - provide_legal_advice
+      - address_legal_issues
+  - name: dispute_resolution
+    description: Resolve legal disputes or conflicts that may arise during the project, including contract disputes, property rights issues, and labor disputes.
+    expected_output: Dispute resolution records, legal documentation, and settlement agreements.
+    agent: legal_agent
+    context:
+      - negotiate_settlements
+      - represent_the_project_in_legal_proceedings
+
+# Finance Tasks
+finance_tasks:
+  - name: budget_management
+    description: Manage project finances, including tracking expenses, monitoring budget adherence, and forecasting cash flow.
+    expected_output: Budget tracking reports, variance analysis reports, and cash flow forecasts.
+    agent: finance_agent
+    context:
+      - track_project_expenses
+      - monitor_budget_adherence
+      - analyze_cost_variances
+      - forecast_cash_flow
+  - name: financial_reporting
+    description: Generate financial reports to track project expenses, analyze variances, and communicate financial status to stakeholders.
+    expected_output: Financial statements, cost reports, and variance analysis reports.
+    agent: finance_agent
+    context:
+      - collect_financial_data
+      - analyze_financial_data
+      - generate_financial_reports
+  - name: financial_compliance
+    description: Ensure compliance with financial regulations, including tax laws, accounting standards, and financial reporting requirements.
+    expected_output: Compliance reports, audit records, and financial documentation.
+    agent: finance_agent
+    context:
+      - monitor_financial_compliance
+      - conduct_financial_audits
+      - address_financial_compliance_issues
+
+# Community Relations Tasks
+community_relations_tasks:
+  - name: community_engagement
+    description: Engage with the local community, communicating project updates, addressing concerns, and fostering positive relationships.
+    expected_output: Community meeting minutes, communication logs, and feedback reports.
+    agent: community_relations_agent
+    context:
+      - schedule_community_meetings
+      - communicate_project_updates
+      - address_community_concerns
+      - gather_community_feedback
+  - name: conflict_resolution
+    description: Resolve any conflicts or disputes that may arise between the project and the community, ensuring a positive and collaborative relationship.
+    expected_output: Conflict resolution records, communication logs, and settlement agreements.
+    agent: community_relations_agent
+    context:
+      - identify_conflict_sources
+      - facilitate_conflict_resolution
+      - negotiate_agreements
+  - name: community_outreach
+    description: Conduct community outreach activities, such as public events, information sessions, and volunteer opportunities, to build positive relationships and promote the project.
+    expected_output: Outreach event reports, communication logs, and participation records.
+    agent: community_relations_agent
+    context:
+      - plan_community_outreach_activities
+      - conduct_outreach_events
+      - track_outreach_participation
+
+# Electrical Tasks
+electrical_tasks:
+  - name: electrical_design
+    description: Design electrical systems for the project, including power distribution, lighting, and communication systems.
+    expected_output: Electrical drawings, specifications, and calculations.
+    agent: electrical_agent
+    context:
+      - gather_electrical_requirements
+      - develop_electrical_design_concepts
+      - create_electrical_drawings
+      - perform_electrical_calculations
+  - name: electrical_installation
+    description: Install electrical systems according to designs and specifications, ensuring compliance with codes and regulations.
+    expected_output: Installation reports, inspection records, and wiring diagrams.
+    agent: electrical_agent
+    context:
+      - install_electrical_systems
+      - conduct_installation_inspections
+      - document_wiring_diagrams
+  - name: electrical_maintenance
+    description: Maintain electrical systems, conducting regular inspections, troubleshooting issues, and performing repairs.
+    expected_output: Maintenance records, troubleshooting reports, and repair logs.
+    agent: electrical_agent
+    context:
+      - conduct_electrical_inspections
+      - troubleshoot_electrical_issues
+      - perform_electrical_repairs
+
+# Mechanical Tasks
+mechanical_tasks:
+  - name: mechanical_design
+    description: Design mechanical systems for the project, including HVAC, plumbing, and fire protection systems.
+    expected_output: Mechanical drawings, specifications, and calculations.
+    agent: mechanical_agent
+    context:
+      - gather_mechanical_requirements
+      - develop_mechanical_design_concepts
+      - create_mechanical_drawings
+      - perform_mechanical_calculations
+  - name: mechanical_installation
+    description: Install mechanical systems according to designs and specifications, ensuring compliance with codes and regulations.
+    expected_output: Installation reports, inspection records, and system diagrams.
+    agent: mechanical_agent
+    context:
+      - install_mechanical_systems
+      - conduct_installation_inspections
+      - document_system_diagrams
+  - name: mechanical_maintenance
+    description: Maintain mechanical systems, conducting regular inspections, troubleshooting issues, and performing repairs.
+    expected_output: Maintenance records, troubleshooting reports, and repair logs.
+    agent: mechanical_agent
+    context:
+      - conduct_mechanical_inspections
+      - troubleshoot_mechanical_issues
+      - perform_mechanical_repairs
+
+# Plumbing Tasks
+plumbing_tasks:
+  - name: plumbing_design
+    description: Design plumbing systems for the project, including water supply, drainage, and waste disposal systems.
+    expected_output: Plumbing drawings, specifications, and calculations.
+    agent: plumbing_agent
+    context:
+      - gather_plumbing_requirements
+      - develop_plumbing_design_concepts
+      - create_plumbing_drawings
+      - perform_plumbing_calculations
+  - name: plumbing_installation
+    description: Install plumbing systems according to designs and specifications, ensuring compliance with codes and regulations.
+    expected_output: Installation reports, inspection records, and piping diagrams.
+    agent: plumbing_agent
+    context:
+      - install_plumbing_systems
+      - conduct_installation_inspections
+      - document_piping_diagrams
+  - name: plumbing_maintenance
+    description: Maintain plumbing systems, conducting regular inspections, troubleshooting issues, and performing repairs.
+    expected_output: Maintenance records, troubleshooting reports, and repair logs.
+    agent: plumbing_agent
+    context:
+      - conduct_plumbing_inspections
+      - troubleshoot_plumbing_issues
+      - perform_plumbing_repairs
+
+# Electronics Tasks
+electronics_tasks:
+  - name: electronics_design
+    description: Design electronic systems for the project, including communication systems, security systems, and control systems.
+    expected_output: Electronic schematics, specifications, and calculations.
+    agent: electronics_agent
+    context:
+      - gather_electronics_requirements
+      - develop_electronics_design_concepts
+      - create_electronic_schematics
+      - perform_electronics_calculations
+  - name: electronics_installation
+    description: Install electronic systems according to designs and specifications, ensuring compliance with codes and regulations.
+    expected_output: Installation reports, inspection records, and wiring diagrams.
+    agent: electronics_agent
+    context:
+      - install_electronic_systems
+      - conduct_installation_inspections
+      - document_wiring_diagrams
+  - name: electronics_maintenance
+    description: Maintain electronic systems, conducting regular inspections, troubleshooting issues, and performing repairs.
+    expected_output: Maintenance records, troubleshooting reports, and repair logs.
+    agent: electronics_agent
+    context:
+      - conduct_electronics_inspections
+      - troubleshoot_electronics_issues
+      - perform_electronics_repairs
+
+# Fire Fighting System Tasks
+fire_fighting_tasks:
+  - name: fire_fighting_system_design
+    description: Design fire fighting systems for the project, including sprinkler systems, fire alarms, and fire suppression systems.
+    expected_output: Fire protection drawings, specifications, and calculations.
+    agent: fire_fighting_agent
+    context:
+      - gather_fire_protection_requirements
+      - develop_fire_protection_design_concepts
+      - create_fire_protection_drawings
+      - perform_fire_protection_calculations
+  - name: fire_fighting_system_installation
+    description: Install fire fighting systems according to designs and specifications, ensuring compliance with codes and regulations.
+    expected_output: Installation reports, inspection records, and system diagrams.
+    agent: fire_fighting_agent
+    context:
+      - install_fire_fighting_systems
+      - conduct_installation_inspections
+      - document_system_diagrams
+  - name: fire_fighting_system_maintenance
+    description: Maintain fire fighting systems, conducting regular inspections, testing, and repairs.
+    expected_output: Maintenance records, test reports, and repair logs.
+    agent: fire_fighting_agent
+    context:
+      - conduct_fire_fighting_system_inspections
+      - perform_fire_fighting_system_tests
+      - perform_fire_fighting_system_repairs
+
+# CCTV Tasks
+cctv_tasks:
+  - name: cctv_system_design
+    description: Design CCTV systems for the project, including camera placement, recording systems, and monitoring systems.
+    expected_output: CCTV system drawings, specifications, and calculations.
+    agent: cctv_agent
+    context:
+      - gather_security_requirements
+      - develop_cctv_system_design_concepts
+      - create_cctv_system_drawings
+      - perform_cctv_system_calculations
+  - name: cctv_system_installation
+    description: Install CCTV systems according to designs and specifications, ensuring compliance with codes and regulations.
+    expected_output: Installation reports, inspection records, and system diagrams.
+    agent: cctv_agent
+    context:
+      - install_cctv_systems
+      - conduct_installation_inspections
+      - document_system_diagrams
+  - name: cctv_system_maintenance
+    description: Maintain CCTV systems, conducting regular inspections, testing, and repairs.
+    expected_output: Maintenance records, test reports, and repair logs.
+    agent: cctv_agent
+    context:
+      - conduct_cctv_system_inspections
+      - perform_cctv_system_tests
+      - perform_cctv_system_repairs
+
+# Instruments Tasks
+instruments_tasks:
+  - name: instrumentation_system_design
+    description: Design instrumentation systems for the project, including process control systems, data acquisition systems, and monitoring systems.
+    expected_output: Instrumentation system drawings, specifications, and calculations.
+    agent: instruments_agent
+    context:
+      - gather_instrumentation_requirements
+      - develop_instrumentation_system_design_concepts
+      - create_instrumentation_system_drawings
+      - perform_instrumentation_system_calculations
+  - name: instrumentation_system_installation
+    description: Install instrumentation systems according to designs and specifications, ensuring compliance with codes and regulations.
+    expected_output: Installation reports, inspection records, and system diagrams.
+    agent: instruments_agent
+    context:
+      - install_instrumentation_systems
+      - conduct_installation_inspections
+      - document_system_diagrams
+  - name: instrumentation_system_maintenance
+    description: Maintain instrumentation systems, conducting regular inspections, calibration, and repairs.
+    expected_output: Maintenance records, calibration reports, and repair logs.
+    agent: instruments_agent
+    context:
+      - conduct_instrumentation_system_inspections
+      - perform_instrumentation_system_calibration
+      - perform_instrumentation_system_repairs
+
+# Mining Specific Tasks
+# ... (Define tasks specific to mining projects as needed)
+
+# Energy Specific Tasks
+# ... (Define tasks specific to energy projects as needed)
+
+# Civil Construction Specific Tasks
+# ... (Define tasks specific to civil construction projects as needed)
+

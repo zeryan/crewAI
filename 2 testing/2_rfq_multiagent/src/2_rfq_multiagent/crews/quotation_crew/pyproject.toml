@@ -1,0 +1,20 @@
+[project]
+name = "quotation_crew"
+version = "0.1.0"
+description = "quotation_crew using crewAI"
+authors = [{ name = "Zeryán Guerra", email = "zeryan@nahuelcura.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.75.0,<1.0.0"
+]
+
+[project.scripts]
+quotation_crew = "quotation_crew.main:run"
+run_crew = "quotation_crew.main:run"
+train = "quotation_crew.main:train"
+replay = "quotation_crew.main:replay"
+test = "quotation_crew.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
